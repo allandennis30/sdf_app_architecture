@@ -22,7 +22,7 @@ class AuthClientHttp {
     }); */
 
     await Future.delayed(const Duration(seconds: 2));
-    /*  return const Success(
+    return const Success(
       LoggedUser(
         id: 1,
         name: 'Usuário Mock',
@@ -30,7 +30,7 @@ class AuthClientHttp {
         token: 'mock_token_123',
         refreshToken: 'mock_refresh_token_456',
       ),
-    ); */
-    return Failure(RemoteException('Erro ao fazer login'));
+    );
+    //  return Failure(RemoteException('Erro ao fazer login'));
   }
 }

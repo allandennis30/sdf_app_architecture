@@ -8,6 +8,7 @@ import 'package:sdf_app_architecture/data/services/auth/client_http.dart';
 import 'package:sdf_app_architecture/data/services/local_storage.dart';
 import 'package:sdf_app_architecture/ui/auth/login/viewModels/login_viewmodel.dart';
 import 'package:sdf_app_architecture/ui/auth/logout/viewmodels/logout_viewmodel.dart';
+import 'package:sdf_app_architecture/utils/main_viewmodel.dart';
 
 final injector = AutoInjector();
 
@@ -20,4 +21,5 @@ void setupDependencies() {
   injector.addSingleton(AuthLocalStorage.new);
   injector.addSingleton(LoginViewmodel.new);
   injector.addSingleton(LogoutViewmodel.new);
+  injector.addSingleton(MainViewmodel.new);
 }
