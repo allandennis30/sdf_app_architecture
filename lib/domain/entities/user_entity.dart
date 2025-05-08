@@ -11,7 +11,7 @@ sealed class User with _$User {
     required String email,
   }) = _User;
 
-  const factory User.notLoggedIn() = NotLoggedIn;
+  const factory User.notLoggedIn() = NotLoggedUser;
 
   const factory User.loggedIn({
     required int id,
@@ -19,7 +19,7 @@ sealed class User with _$User {
     required String email,
     required String token,
     required String refreshToken,
-  }) = LoggedIn;
+  }) = LoggedUser;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
